@@ -1,7 +1,7 @@
 const Lobby = () => {
     return (
-        <div id="lobby">
-            <h2>Lobby Page</h2>
+        <div className="content" id="lobby">
+            <h3>Lobby Page</h3>
         </div>
     );
 };
