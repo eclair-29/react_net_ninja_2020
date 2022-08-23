@@ -1,4 +1,3 @@
-import "./App.css";
 import Lobby from "./Lobby";
 import NavBar from "./NavBar";
 
