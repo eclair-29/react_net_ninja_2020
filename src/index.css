@@ -37,5 +37,12 @@ a, div {
 .content {
     max-width: 700px;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin: 0 auto;
+}
+
+button {
+    margin: 10px 0;
 }
