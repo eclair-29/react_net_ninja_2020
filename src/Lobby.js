@@ -1,22 +1,12 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 const Lobby = () => {
-    const [user, setUser] = useState("Miguel");
-    const [age, setAge] = useState(26);
-
-    const handleClickEvent = () => {
-        setUser("Michael");
-        setAge(25);
-    };
+    const [blogs, setBlogs] = useState(null); // data: blogs.csv
 
     return (
         <div className="content" id="lobby">
-            <h3>
-                {user} is {age} years old
-            </h3>
-            <button id="button_click" onClick={handleClickEvent}>
-                Click Me
-            </button>
+            <BlogList blogs={blogs} header="All Blogs!" />
         </div>
     );
 };
