@@ -1,48 +1,44 @@
-/* google font here */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+/* ant design css */
+@import 'antd/dist/antd.css';
+
+/* google font - Waterfall and Barlow */
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&family=Waterfall&display=swap');
 
 * {
-    margin: 0;
-    font-family: "Poppins";
-    color: #333;
-}
-
-a, div {
-    font-size: 14px;
+    border-radius: 0 !important;
+    font-family: "Barlow Semi Condensed";
 }
 
 #navbar {
-    padding: 20px;
     display: flex;
-    align-items: center;
     max-width: 700px;
-    margin: 0 auto;
+    height: 70px;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-#navbar h3 {
+#logo {
     color: #f1356d;
+    font-family: "Waterfall";
 }
 
 #navbar a {
-   padding-left: 20px;
-   text-decoration: none;
-   font-weight: 500;
+    padding-left: 10px;
 }
 
 #navbar a:hover {
-    color: #f1356d;
+    /* color: #f1356d */
 }
 
-.content {
-    max-width: 700px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+#lobby {
     margin: 0 auto;
+    max-width: 700px;
+    padding: 15px;
 }
 
-button {
-    margin: 10px 0;
+#blog_list .ant-card {
+    margin-top: 15px;
 }
