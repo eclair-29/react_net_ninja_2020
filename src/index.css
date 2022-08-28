@@ -1,13 +1,13 @@
-/* ant design css */
 @import 'antd/dist/antd.css';
-
-/* google font - Waterfall and Barlow */
-@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&family=Waterfall&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 * {
     border-radius: 0 !important;
-    font-family: "Barlow Semi Condensed";
+    font-family: "Poppins";
+}
+
+div, a, span {
+    font-size: 12px;
 }
 
 #navbar {
@@ -22,21 +22,20 @@
 
 #logo {
     color: #f1356d;
-    font-family: "Waterfall";
 }
 
 #navbar a {
     padding-left: 10px;
 }
 
-#navbar a:hover {
-    /* color: #f1356d */
-}
-
 #lobby {
     margin: 0 auto;
     max-width: 700px;
     padding: 15px;
+}
+
+.blog_header {
+    margin-top: 15px;
 }
 
 #blog_list .ant-card {

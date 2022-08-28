@@ -1,27 +1,24 @@
-import {
-    EditOutlined,
-    EllipsisOutlined,
-    SettingOutlined,
-} from "@ant-design/icons";
-import { Card } from "antd";
-
-const actionIcons = [
-    <SettingOutlined key="setting" />,
-    <EditOutlined key="edit" />,
-    <EllipsisOutlined key="ellipsis" />,
-];
+import { Card, Button, Typography } from "antd";
 
 const BlogCard = ({ blog }) => (
-    <Card title={blog.title} actions={actionIcons}>
+    <Card
+        type="inner"
+        extra={<Button type="text">Delete</Button>}
+        title={blog.title}
+    >
         {blog.description}
     </Card>
 );
 
 const BlogList = (props) => {
-    const { blogs } = props;
+    const { blogs, header } = props;
+    const { Title } = Typography;
 
     return (
         <div id="blog_list">
+            <Title className="blog_header" level={5}>
+                {header}
+            </Title>
             {blogs.map((blog) => (
                 <BlogCard blog={blog} key={blog.id} />
             ))}
