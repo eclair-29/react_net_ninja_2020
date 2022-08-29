@@ -1,9 +1,13 @@
 import { Card, Button, Typography } from "antd";
 
-const BlogCard = ({ blog }) => (
+const BlogCard = ({ blog, handleDeleteBlog }) => (
     <Card
         type="inner"
-        extra={<Button type="text">Delete</Button>}
+        extra={
+            <Button type="text" onClick={() => handleDeleteBlog(blog.id)}>
+                Delete
+            </Button>
+        }
         title={blog.title}
     >
         {blog.description}
@@ -11,16 +15,18 @@ const BlogCard = ({ blog }) => (
 );
 
 const BlogList = (props) => {
-    const { blogs, header } = props;
+    const { blogs, header, handleDeleteBlog } = props;
     const { Title } = Typography;
 
     return (
         <div id="blog_list">
-            <Title className="blog_header" level={5}>
-                {header}
-            </Title>
+            <Title level={5}>{header}</Title>
             {blogs.map((blog) => (
-                <BlogCard blog={blog} key={blog.id} />
+                <BlogCard
+                    blog={blog}
+                    handleDeleteBlog={handleDeleteBlog}
+                    key={blog.id}
+                />
             ))}
         </div>
     );
