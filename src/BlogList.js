@@ -1,15 +1,4 @@
-import { Card, Button } from "antd";
-
-// externalize below function component to a new file "BlogCard.js"
-const BlogCard = ({ blog }) => (
-    <Card
-        type="inner"
-        extra={<Button type="text">Delete</Button>}
-        title={blog.title}
-    >
-        {blog.description}
-    </Card>
-);
+import BlogCard from "./BlogCard";
 
 const BlogList = (props) => {
     const { blogs } = props;
