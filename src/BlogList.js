@@ -1,13 +1,10 @@
-import { Card, Button, Typography } from "antd";
+import { Card, Button } from "antd";
 
-const BlogCard = ({ blog, handleDeleteBlog }) => (
+// externalize below function component to a new file "BlogCard.js"
+const BlogCard = ({ blog }) => (
     <Card
         type="inner"
-        extra={
-            <Button type="text" onClick={() => handleDeleteBlog(blog.id)}>
-                Delete
-            </Button>
-        }
+        extra={<Button type="text">Delete</Button>}
         title={blog.title}
     >
         {blog.description}
@@ -15,18 +12,12 @@ const BlogCard = ({ blog, handleDeleteBlog }) => (
 );
 
 const BlogList = (props) => {
-    const { blogs, header, handleDeleteBlog } = props;
-    const { Title } = Typography;
+    const { blogs } = props;
 
     return (
-        <div id="blog_list">
-            <Title level={5}>{header}</Title>
+        <div id="blog_list_container">
             {blogs.map((blog) => (
-                <BlogCard
-                    blog={blog}
-                    handleDeleteBlog={handleDeleteBlog}
-                    key={blog.id}
-                />
+                <BlogCard blog={blog} key={blog.id} />
             ))}
         </div>
     );
